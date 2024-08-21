@@ -1,0 +1,4 @@
+cd "D:\YEAR 3 SEMZ 01 Cyber Security\05_Information Security Policy and Management - IE3072\00 Assignment\AdminView"
+
+
+mongodb+srv://ISPM:<password>@cluster0.sos43.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
