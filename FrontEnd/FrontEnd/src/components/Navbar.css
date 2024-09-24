@@ -1,0 +1,132 @@
+/* Navbar styles */
+.navbar {
+  background-color: #03396c;
+  border-bottom: 1px solid #fff;
+  padding: 0.5rem 0;
+  height: 60px; /* Define fixed navbar height */
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.navbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%; /* Ensure content fills navbar height */
+}
+
+/* Logo and Title Container */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  white-space: nowrap; /* Prevent title from wrapping */
+}
+
+/* Link styles */
+.elements-container {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.link {
+  color: white;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 15px;
+  border-radius: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  transition: background-color 0.3s, color 0.3s;
+  text-decoration: none; /* Remove underline */
+  display: flex;
+  align-items: center; /* Vertically center the text */
+  height: 40px; /* Set the height of links to match image */
+}
+
+.link:hover {
+  background-color: black;
+  color: white;
+}
+
+.link-active {
+  background-color: black;
+}
+
+/* User image styles */
+.user-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px; /* Set width same as height for square shape */
+  border-radius: 50%; /* Make it circular */
+  border: 2px solid #ffffff; /* Add a white border */
+  overflow: hidden; /* Ensure image stays inside the container */
+}
+
+.user-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover; /* Ensure image scales properly */
+}
+
+/* Shine Effect for Navbar_WebpageName */
+#Navbar_WebpageName {
+  font-size: 2em;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.3);
+  background: #222 linear-gradient(
+    to right,
+    transparent 0%,
+    transparent 40%,
+    #ffffff 50%,
+    transparent 60%,
+    transparent 100%
+  ) 0 0 no-repeat;
+  background-clip: text;
+  background-size: 200%;
+  animation: shine 5s infinite linear;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5),
+               0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes shine {
+  0% {
+    background-position: -200%;
+  }
+  100% {
+    background-position: 200%;
+  }
+}
+
+/* Navbar styles */
+.link {
+  color: white;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 15px;
+  border-radius: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  transition: background-color 0.3s, color 0.3s;
+  text-decoration: none; /* Remove underline */
+}
+
+.link:hover {
+  background-color: black;
+  color: white;
+}
+
+.link-active {
+  background-color: black;
+}
+

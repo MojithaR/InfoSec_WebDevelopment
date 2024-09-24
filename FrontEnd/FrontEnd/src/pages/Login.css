@@ -1,0 +1,189 @@
+/* General reset for cleaner appearance */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Center the login container */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  background-color: #f7f7f7; /* Light background for contrast */
+}
+
+/* Styling for the login form */
+.login-form {
+  background-color: #ffffff; /* White background */
+  padding: 2rem; /* Padding inside the form */
+  border-radius: 12px; /* Rounded corners for modern look */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Softer shadow */
+  width: 350px; /* Width */
+  text-align: center;
+  border: 1px solid #b3cde0; /* Border color */
+  min-height: 450px;
+}
+
+/* Form title styling */
+.login-form h1 {
+  margin-bottom: 1.5rem; /* Space below the heading */
+  color: #03396c; /* Dark blue for the title */
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
+/* Input container styling */
+.inputContainer {
+  position: relative;
+  margin-bottom: 25px; /* Space between inputs */
+}
+
+/* Password container styling */
+.password-container {
+  display: flex;
+  align-items: center;
+}
+
+.password-container .customInput {
+  padding-right: 40px; /* Space for show button */
+}
+
+/* Show password button */
+.show-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* Custom input field styling */
+.customInput {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #6497b1; /* Border color */
+  outline: none;
+  transition: border-color 0.3s ease;
+  color: #03396c; /* Input text color */
+}
+
+/* Focus and filled state for inputs */
+.customInput:focus,
+.customInput:not(:placeholder-shown) {
+  border-color: #005b96; /* Focused border color */
+}
+
+/* Input label styling */
+.inputLabel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  padding: 5px;
+  font-size: 16px;
+  color: #6497b1; /* Label color */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.customInput:focus + .inputLabel,
+.customInput:not(:placeholder-shown) + .inputLabel {
+  transform: translateY(-100%) translateX(-5px) scale(0.85);
+  color: #005b96; /* Active label color */
+}
+
+/* Error message styling */
+.error-message {
+  color: red;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Button styling */
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: #03396c; /* Button hover background */
+  color: #ffffff; /* Button hover text color */
+}
+
+/* Contact admin button styling */
+.contact-admin {
+  background-color: #3b5998; /* Button color */
+  color: #fff;
+  padding: 0.75rem;
+}
+
+.contact-admin:hover {
+  background-color: #011f4b; /* Hover color */
+}
+
+/* Locked message styling */
+.locked-message {
+  font-size: 1rem;
+  color: #b30000; /* Locked message color */
+}
+
+/* Close button styling */
+.close-button {
+  background-color: #3b5998; /* Close button color */
+  color: white; /* Text color */
+  padding: 0.5rem 1rem; /* Padding for the button */
+  border: none; /* No border */
+  border-radius: 6px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  font-size: 1rem; /* Font size */
+  margin-bottom: 1.5rem; /* Space below the button */
+  transition: background-color 0.3s ease; /* Transition effect */
+}
+
+.close-button:hover {
+  background-color: #011f4b; /* Hover color */
+}
+
+
+/* src/pages/Login.css */
+
+/* Close button styling */
+.close-button {
+  position: absolute;
+  top: 10px; /* Adjusted position to be closer to the heading */
+  right: 10px; /* Adjusted position */
+  width: 30px; /* Size of the button */
+  height: 30px; /* Size of the button */
+  background-color: #f7f7f7; /* Background color */
+  border: none; /* No border */
+  border-radius: 50%; /* Round shape */
+  color: #03396c; /* Color of the close symbol */
+  font-size: 20px; /* Font size for close symbol */
+  cursor: pointer; /* Pointer cursor */
+  display: flex; /* Centering the content */
+  justify-content: center; /* Centering the content */
+  align-items: center; /* Centering the content */
+  transition: background-color 0.3s ease; /* Transition effect */
+}
+
+.close-button:hover {
+  background-color: #b3cde0; /* Hover effect */
+}
+
+/* Ensure the login form has a relative position for absolute children */
+.login-form {
+  position: relative; /* Add this line */
+}
