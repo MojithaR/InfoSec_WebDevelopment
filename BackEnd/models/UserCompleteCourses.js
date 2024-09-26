@@ -10,3 +10,6 @@ const UserCompleteCoursesSchema = new mongoose.Schema({
 
 const UserCompleteCoursesModel = mongoose.model('UserCompleteCourses', UserCompleteCoursesSchema);
 module.exports = UserCompleteCoursesModel;
+
+
+//to update the admin chart more detailed version

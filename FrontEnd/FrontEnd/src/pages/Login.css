@@ -1,4 +1,8 @@
-/* General reset for cleaner appearance */
+/* 
+* RESETTING DEFAULTS:
+* Removes default margin and padding from elements, 
+* applies box-sizing for better layout control, and sets a default font-family.
+*/
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +10,11 @@
   font-family: 'Arial', sans-serif;
 }
 
-/* Center the login container */
+/*
+* LOGIN CONTAINER STYLING:
+* Centers the login container both vertically and horizontally on the screen,
+* makes it cover the full viewport height.
+*/
 .login-container {
   display: flex;
   justify-content: center;
@@ -15,33 +23,50 @@
   background-color: #f7f7f7; /* Light background for contrast */
 }
 
-/* Styling for the login form */
+/*
+* LOGIN FORM STYLING:
+* Defines the basic appearance of the login form, including padding, 
+* background, shadow for depth, and rounded corners.
+*/
 .login-form {
   background-color: #ffffff; /* White background */
   padding: 2rem; /* Padding inside the form */
   border-radius: 12px; /* Rounded corners for modern look */
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Softer shadow */
   width: 350px; /* Width */
-  text-align: center;
+  text-align: center; /* Centering text */
   border: 1px solid #b3cde0; /* Border color */
-  min-height: 450px;
+  min-height: 450px; /* Ensures a minimum height */
+  position: relative; /* For positioning child elements inside the form */
 }
 
-/* Form title styling */
+/*
+* FORM TITLE STYLING:
+* Styles the h1 header inside the login form, gives it some margin 
+* and a dark blue color.
+*/
 .login-form h1 {
   margin-bottom: 1.5rem; /* Space below the heading */
   color: #03396c; /* Dark blue for the title */
-  font-weight: 600;
-  font-size: 1.8rem;
+  font-weight: 600; /* Bold text */
+  font-size: 1.8rem; /* Larger font size */
 }
 
-/* Input container styling */
+/*
+* INPUT CONTAINER STYLING:
+* Manages the positioning and spacing of form inputs,
+* including the relative positioning for the input label animation.
+*/
 .inputContainer {
   position: relative;
   margin-bottom: 25px; /* Space between inputs */
 }
 
-/* Password container styling */
+/*
+* PASSWORD CONTAINER:
+* Custom styling for the password input field with extra space for the 
+* "show password" button.
+*/
 .password-container {
   display: flex;
   align-items: center;
@@ -51,37 +76,52 @@
   padding-right: 40px; /* Space for show button */
 }
 
-/* Show password button */
+/*
+* SHOW PASSWORD BUTTON:
+* Styles the button for toggling password visibility inside the password field.
+*/
 .show-password {
   position: absolute;
   right: 10px;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-50%); /* Vertically centers the button */
   background-color: transparent;
   border: none;
   cursor: pointer;
 }
 
-/* Custom input field styling */
+/*
+* CUSTOM INPUT FIELDS:
+* Basic styles for all input fields inside the form, 
+* including transitions for focus effects.
+*/
 .customInput {
-  width: 100%;
+  width: 100%; /* Full width input */
   padding: 12px;
   font-size: 16px;
   background-color: transparent;
   border: none;
-  border-bottom: 2px solid #6497b1; /* Border color */
+  border-bottom: 2px solid #6497b1; /* Blue border */
   outline: none;
-  transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease; /* Smooth transition on focus */
   color: #03396c; /* Input text color */
 }
 
-/* Focus and filled state for inputs */
+/*
+* FOCUS & FILLED STATE:
+* Adjusts the input border color when the user is typing or focusing 
+* on the field.
+*/
 .customInput:focus,
 .customInput:not(:placeholder-shown) {
-  border-color: #005b96; /* Focused border color */
+  border-color: #005b96; /* Darker blue on focus */
 }
 
-/* Input label styling */
+/*
+* INPUT LABEL:
+* Defines the appearance of the input labels and provides the transition
+* for the floating label effect.
+*/
 .inputLabel {
   position: absolute;
   top: 0;
@@ -89,81 +129,86 @@
   pointer-events: none;
   padding: 5px;
   font-size: 16px;
-  color: #6497b1; /* Label color */
-  transition: transform 0.3s ease, color 0.3s ease;
+  color: #6497b1; /* Light blue label */
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth animation */
 }
 
+/*
+* LABEL TRANSITION:
+* Shrinks and moves the label when input is focused or has text.
+*/
 .customInput:focus + .inputLabel,
 .customInput:not(:placeholder-shown) + .inputLabel {
   transform: translateY(-100%) translateX(-5px) scale(0.85);
-  color: #005b96; /* Active label color */
+  color: #005b96; /* Darker label color on focus */
 }
 
-/* Error message styling */
+/*
+* ERROR MESSAGE STYLING:
+* Displays error messages in red below the input fields.
+*/
 .error-message {
   color: red;
   margin-bottom: 1rem;
   font-size: 0.9rem;
 }
 
-/* Button styling */
+/*
+* BUTTON STYLING:
+* General button styling for the form buttons, including padding,
+* font size, and a hover effect.
+
 button {
-  width: 100%;
+  width: 100%; /* Full width 
   padding: 12px;
   border: none;
-  border-radius: 6px;
+  border-radius: 6px; /* Rounded corners 
   cursor: pointer;
   font-size: 1rem;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease; /* Smooth hover effect 
 }
 
-/* Button hover effect */
+/*
+* BUTTON HOVER EFFECT:
+* Changes the background and text color on hover for form buttons.
+
 button:hover {
-  background-color: #03396c; /* Button hover background */
-  color: #ffffff; /* Button hover text color */
+  background-color: #03396c; /* Dark blue background 
+  color: #ffffff; /* White text 
 }
+*/
 
-/* Contact admin button styling */
+/*
+* CONTACT ADMIN BUTTON:
+* Special styling for the "Contact Admin" button, with specific background colors.
+*/
 .contact-admin {
-  background-color: #3b5998; /* Button color */
+  background-color: #3b5998; /* Facebook-like blue */
   color: #fff;
   padding: 0.75rem;
 }
 
 .contact-admin:hover {
-  background-color: #011f4b; /* Hover color */
+  background-color: #011f4b; /* Darker blue on hover */
 }
 
-/* Locked message styling */
+/*
+* LOCKED MESSAGE STYLING:
+* Displays account lock message in red when applicable.
+*/
 .locked-message {
   font-size: 1rem;
-  color: #b30000; /* Locked message color */
+  color: #b30000; /* Red for the locked message */
 }
 
-/* Close button styling */
-.close-button {
-  background-color: #3b5998; /* Close button color */
-  color: white; /* Text color */
-  padding: 0.5rem 1rem; /* Padding for the button */
-  border: none; /* No border */
-  border-radius: 6px; /* Rounded corners */
-  cursor: pointer; /* Pointer cursor */
-  font-size: 1rem; /* Font size */
-  margin-bottom: 1.5rem; /* Space below the button */
-  transition: background-color 0.3s ease; /* Transition effect */
-}
-
-.close-button:hover {
-  background-color: #011f4b; /* Hover color */
-}
-
-
-/* src/pages/Login.css */
-
-/* Close button styling */
+/*
+* CLOSE BUTTON STYLING:
+* Styles the close button at the top of the login form, giving it
+* a circular shape and center alignment.
+*/
 .close-button {
   position: absolute;
-  top: 10px; /* Adjusted position to be closer to the heading */
+  top: 10px; /* Position closer to the heading */
   right: 10px; /* Adjusted position */
   width: 30px; /* Size of the button */
   height: 30px; /* Size of the button */
@@ -176,14 +221,13 @@ button:hover {
   display: flex; /* Centering the content */
   justify-content: center; /* Centering the content */
   align-items: center; /* Centering the content */
-  transition: background-color 0.3s ease; /* Transition effect */
+  transition: background-color 0.3s ease; /* Smooth transition */
 }
 
+/*
+* CLOSE BUTTON HOVER EFFECT:
+* Changes the background color when the user hovers over the close button.
+*/
 .close-button:hover {
-  background-color: #b3cde0; /* Hover effect */
-}
-
-/* Ensure the login form has a relative position for absolute children */
-.login-form {
-  position: relative; /* Add this line */
+  background-color: #b3cde0; /* Lighter blue on hover */
 }

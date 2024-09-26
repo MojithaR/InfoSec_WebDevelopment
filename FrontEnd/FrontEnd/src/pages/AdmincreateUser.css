@@ -1,0 +1,141 @@
+/* Popup overlay with blurred background */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.popup-container {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  width: 400px;
+  max-height: 90vh;
+  overflow-y: auto;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.form-section {
+  margin-bottom: 20px;
+}
+
+.credentials-container {
+  margin-top: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 12px 25px;
+  margin: 10px;
+  background-color: #005b96;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  background-color: #03396c;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.styled-button {
+  background-color: #006494;
+  border: none;
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 12px 25px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.styled-button:hover {
+  background-color: #03396c;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Align checkbox and its label on the same line */
+.admin-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align checkbox and text to the left */
+}
+
+.admin-checkbox input {
+  margin-right: 1px; /* Add space between checkbox and label */
+}
+
+.admin-checkbox span {
+  color: #333;
+  margin-left: 5px; /* Reduce the space between checkbox and label */
+  font-size: 16px; /* Adjust font size to match input fields */
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background-color: transparent;
+  border: none;
+  font-size: 28px;
+  color: #333;
+  cursor: pointer;
+}
+
+.status-message {
+  margin-top: 20px;
+  font-size: 16px;
+  padding: 12px;
+  border-radius: 6px;
+}
+
+.status-message.success {
+  background-color: #e6f7e9;
+  color: #27ae60;
+}
+
+.status-message.error {
+  background-color: #fbeae9;
+  color: #e74c3c;
+}
+
+.status-message.warning {
+  background-color: #fcf6e4;
+  color: #f39c12;
+}
+
+.share-button {
+  background-color: #009688;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.share-button:hover {
+  background-color: #00796b;
+}

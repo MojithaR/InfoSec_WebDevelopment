@@ -1,10 +1,13 @@
 /* src/components/LoginpageButtons.css */
+
+/* Container for the buttons */
 .button-container {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
+/* Common button styling */
 .c-button {
   background-color: #005b96;
   color: #ffffff;
@@ -18,10 +21,12 @@
   transition: background-color 0.3s ease;
 }
 
+/* Button hover effect */
 .c-button:hover {
   background-color: #6497b1;
 }
 
+/* Gooey effect for buttons */
 .c-button--gooey .c-button__blobs {
   position: absolute;
   top: 0;
@@ -36,6 +41,7 @@
   animation: blobs 2.5s infinite;
 }
 
+/* Blob animation for gooey buttons */
 .c-button--gooey .c-button__blobs div {
   width: 12px;
   height: 12px;
@@ -59,5 +65,128 @@
   }
   50% {
     transform: translate(0, -10px);
+  }
+}
+
+/* Styling for popup overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Styling for the popup card */
+.popup-card {
+  background-color: #f7f7f7;
+  width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Popup header styling */
+.popup-header h2 {
+  color: #03396c;
+  margin-bottom: 10px;
+}
+
+/* Popup content styling */
+.popup-content p {
+  color: #111111;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* Input fields for user data */
+.popup-input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #b3cde0;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Popup buttons container */
+.popup-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+/* Common styling for popup buttons */
+.popup-button {
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #ffffff;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+/* WhatsApp button styling */
+.whatsapp-button {
+  background-color: #03396c;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-button:hover {
+  background-color: #005b96;
+}
+
+/* Email button styling */
+.email-button {
+  background-color: #6497b1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.email-button:hover {
+  background-color: #005b96;
+}
+
+/* Close button styling */
+.close-button {
+  background-color: #333333;
+  color: #ffffff;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.close-button:hover {
+  background-color: #111111;
+}
+
+/* Keyframe animations for the card's waves */
+.wave {
+  position: absolute;
+  width: 540px;
+  height: 700px;
+  opacity: 0.6;
+  left: 0;
+  top: 0;
+  margin-left: -50%;
+  margin-top: -70%;
+  background: linear-gradient(744deg, #af40ff, #5b42f3 60%, #00ddeb);
+  animation: wave 55s infinite linear;
+  border-radius: 40%;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+   100% {
+    transform: rotate(360deg);
   }
 }

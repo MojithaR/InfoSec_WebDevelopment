@@ -1,4 +1,3 @@
-// src/pages/Login.jsx
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
@@ -7,6 +6,7 @@ import ShowButton from '../components/showbutton';
 import LoginpageButtons from '../components/LoginpageButtons';
 import useLoginSecurity from '../components/LoginSecurity';
 import Loading from './Loading.jsx'; // Ensure this path and export are correct
+import LoginBackground from '../assets/LoginBackground.jpg'; // Import the background image
 
 function Login() {
   const [username, setUsername] = useState('');
@@ -28,7 +28,6 @@ function Login() {
     try {
       setLoading(true); // Set loading to true when login starts
       const response = await axios.post('http://localhost:3001/login', { username, password });
-      alert('Login successful');
       const { token } = response.data;
 
       // Save login info in localStorage
@@ -40,7 +39,7 @@ function Login() {
       // Simulate a loading delay of 2 seconds before redirecting
       setTimeout(() => {
         setLoading(false); // Stop loading after 2 seconds
-        if (username === 'admin') {
+        if (username.includes('admin')) {
           navigate('/admin');
         } else {
           navigate('/user-account');
@@ -54,15 +53,9 @@ function Login() {
   };
 
   return (
-    <div className="login-page">
+    <div className="login-page" style={{ backgroundImage: `url(${LoginBackground})`, backgroundSize: 'cover', backgroundPosition: 'center', height: '100vh' }}>
       {/* Loading component for showing a loading state */}
       {loading && <Loading />} {/* Show loading when in loading state */}
-
-      {/* Background Video */}
-      {/*<video className="background-video" autoPlay loop muted>
-        <source src={backgroundVideo} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>*/}
 
       {/* Login Form */}
       <div className="login-container">
@@ -115,7 +108,7 @@ function Login() {
           ) : (
             <>
               <p>Your account is locked. Try again in {lockTime} seconds.</p>
-              <button onClick={() => alert('Contact Admin')} className="contact-admin">
+              <button onClick={() => alert('Please Contact Admin Via admin@example.com mail')} className="contact-admin">
                 Contact Admin
               </button>
             </>
